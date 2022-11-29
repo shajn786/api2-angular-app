@@ -1,4 +1,3 @@
-
 <app-navbar></app-navbar>
 
 <div class="container mt-4 ">
@@ -12,18 +11,24 @@
                           <tr>
                             
                             <th scope="col">id</th>
-                            <th scope="col">Nation</th>
-                            <th scope="col">Id Year</th>
-                            <th scope="col">Population</th>
+                            <th scope="col">todo</th>
+                            <th scope="col">completed</th>
+                            <th scope="col">userId</th>
+
+                           
+
                           </tr>
                         </thead>
                         <tbody>
-                          <tr *ngFor="let i of uspublic.data">
+                          <tr *ngFor="let i of data.todos">
                             
-                            <td>{{i.IDNation}}</td>
-                            <td>{{i.Nation}}</td>
-                            <td>{{i.IDYear}}</td>
-                            <td>{{i.Population}}</td>
+                            <td>{{i.id}}</td>
+                            <td>{{i.todo}}</td>
+                            <td>{{i.completed}}</td>
+                            <td>{{i.userId}}</td>
+
+                           
+
                           </tr>
                          
                         </tbody>
