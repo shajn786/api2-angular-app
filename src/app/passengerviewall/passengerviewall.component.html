@@ -1,24 +1,27 @@
 <app-navbar></app-navbar>
-
-<div class="container mt-4 ">
+<div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div class="row g-3">
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of passenger.data">
-
-                    <div class="card" style="width: 18rem;">
-                        <img src="{{i.airline[0].logo}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <h5 class="card-title">{{i.airline[0].name}}</h5>
-                          <p class="card-text">{{i.airline[0].head_quaters}}</p>
-                          <p class="card-text">{{i.airline[0].slogan}}</p>
-                          
-                          
-                        </div>
-                      </div>
-
-                </div>
-            </div>
+            <table class="table mt-4">
+                <thead>
+                  <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Total Trips</th>
+                    <th scope="col">Airline</th>
+                    <th scope="col">Airline country</th>
+                    <th scope="col">Connect</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of passenger.data">
+                    <th>{{i.name}}</th>
+                    <td>{{i.trips}}</td>
+                    <td>{{i.airline[0].name}}</td>
+                    <td>{{i.airline[0].country}}</td>
+                    <td><a class="btn btn-primary" href="{{i.airline[0].website}}" target="_blank">Website</a></td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
     </div>
 </div>
