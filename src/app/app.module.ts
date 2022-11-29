@@ -14,6 +14,7 @@ import { QouteComponent } from './qoute/qoute.component';
 import { GetCoursesComponent } from './get-courses/get-courses.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 const myRoutes : Routes =[
   {
@@ -39,6 +40,9 @@ const myRoutes : Routes =[
   },
   {
     path:"userinfo",component:UserinfoComponent
+  },
+  {
+    path:"uspublic",component:UspublicComponent
   }
 ]
 
@@ -60,7 +64,8 @@ const myRoutes : Routes =[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoutes)
+    RouterModule.forRoot(myRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
